@@ -5,7 +5,7 @@ const Balance = () => {
     return (
         <div>
             <h4>Expense Tracker</h4>
-            <h1 id='balance'>$0.00</h1>
+            <h1>$0.00</h1>
         </div>
     )
 }

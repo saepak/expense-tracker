@@ -1,9 +1,12 @@
 import React from 'react'
+import { Typography } from 'antd';
 
 
 const Header = () => {
+    const { Title } = Typography;
+
     return (
-        <h2>Expense Tracker</h2>
+        <Title style={{textAlign:'center', paddingTop: 25}}>Expense Tracker</Title>
     )
 }
 

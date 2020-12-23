@@ -1,8 +1,10 @@
 import React, {useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
+import { Typography } from 'antd'
 
 const IncomeExpenses = () => {
 
+    const { Title } = Typography
     const { transactions } = useContext(GlobalContext)
 
     const amounts = transactions.map(transaction => transaction.amount);
@@ -20,11 +22,11 @@ const IncomeExpenses = () => {
     return (
         <div className="inc-exp-container">
             <div>
-                <h4>Income</h4>
+                <Title level={5}>Income</Title>
                 <p className="money plus">${income}</p>
             </div>
             <div>
-                <h4>Expense</h4>
+                <Title level={5}>Expense</Title>
                 <p className="money minus">${expense}</p>
             </div>
       </div>

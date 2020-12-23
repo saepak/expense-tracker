@@ -24,16 +24,6 @@ h1 {
   margin: 0;
 }
 
-h3 {
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 10px;
-  margin: 40px 0 10px;
-}
-
-h4 {
-  margin: 0;
-  text-transform: uppercase;
-}
 
 .balance {
   background-color: white;
@@ -75,6 +65,16 @@ h4 {
   color: #c0392b;
 }
 
+.title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  padding-bottom: 10px;
+}
+
 label {
   display: inline-block;
   margin: 10px 0;
@@ -107,6 +107,7 @@ input[type='number'] {
 .delete-btn:focus {
   outline: 0;
 }
+
 
 .list {
   list-style-type: none;

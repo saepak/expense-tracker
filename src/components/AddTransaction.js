@@ -1,9 +1,11 @@
 import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
+import { Typography } from 'antd'
 
 
 const AddTransaction = () => {
 
+    const { Title } = Typography
     const [text, setText] = useState('')
     const [amount, setAmount] = useState(0)
     const { addTransaction } = useContext(GlobalContext)
@@ -24,7 +26,12 @@ const AddTransaction = () => {
 
     return (
         <div>
-            <h3>Add new transaction</h3>
+            <div className='title-container'>
+                <Title level={5} className='title'>
+                    Add new transaction
+                </Title>
+                <span>dd</span>
+            </div>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
                 <input 

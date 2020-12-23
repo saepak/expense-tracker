@@ -8,8 +8,8 @@ const Balance = () => {
     const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
     return (
-        <div>
-            <h4>Expense Tracker</h4>
+        <div className='balance'>
+            <h4>Balance</h4>
             <h1>${total}</h1>
         </div>
     )

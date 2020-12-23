@@ -18,6 +18,8 @@ const AddTransaction = () => {
         }
 
         addTransaction(newTransaction)
+        setText('')
+        setAmount(0)
     }
 
     return (
@@ -25,15 +27,19 @@ const AddTransaction = () => {
             <h3>Add new transaction</h3>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
-                <label for="text">Text</label>
-                <input type="text" value={text} onChange={(e)=> setText(e.target.value)} placeholder="Enter text..." />
+                <input 
+                    type="text" 
+                    value={text} 
+                    placeholder='Enter new transaction'
+                    style={{marginBottom: 10}}
+                    onChange={(e)=> setText(e.target.value)} />
                 </div>
                 <div className="form-control">
-                <label for="amount"
-                    >Amount <br />
-                    (negative - expense, positive - income)</label
-                >
-                <input type="number" value={amount} onChange={(e)=> setAmount(e.target.value)} placeholder="Enter amount..." />
+                <input 
+                    type="number" 
+                    value={amount}
+                    placeholder='Amount ( -expense, +income)'
+                    onChange={(e)=> setAmount(e.target.value)} />
                 </div>
                 <button className="btn">Add transaction</button>
             </form>

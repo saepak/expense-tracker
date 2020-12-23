@@ -1,13 +1,14 @@
 import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
-import { Typography } from 'antd'
-
+import { Typography, Button } from 'antd'
+import { PlusSquareOutlined } from '@ant-design/icons' 
 
 const AddTransaction = () => {
 
     const { Title } = Typography
     const [text, setText] = useState('')
     const [amount, setAmount] = useState(0)
+    const [add, setAdd] = useState(false)
     const { addTransaction } = useContext(GlobalContext)
 
     const onSubmit = e => {
@@ -24,14 +25,16 @@ const AddTransaction = () => {
         setAmount(0)
     }
 
-    return (
-        <div>
-            <div className='title-container'>
-                <Title level={5} className='title'>
-                    Add new transaction
-                </Title>
-                <span>dd</span>
-            </div>
+    const addBtn = () => {
+        if(add === false) {
+            setAdd(true)
+        } else {
+            setAdd(false)
+        }
+    }
+
+    const AddForm = () => {
+        return (
             <form onSubmit={onSubmit}>
                 <div className="form-control">
                 <input 
@@ -50,6 +53,20 @@ const AddTransaction = () => {
                 </div>
                 <button className="btn">Add transaction</button>
             </form>
+        )
+    }
+
+    return (
+        <div>
+            <div className='title-container'>
+                <Title level={5} className='title'>
+                    Add new transaction
+                </Title>
+                <Button onClick={addBtn} className='add-btn'>
+                    <PlusSquareOutlined className='add-icon' />
+                </Button>
+            </div>
+            { add ? <AddForm /> : '' }
         </div>
     )
 }

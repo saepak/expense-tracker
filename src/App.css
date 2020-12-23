@@ -67,8 +67,33 @@ h1 {
 
 .title-container {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+}
+
+.add-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+.add-btn:hover {
+  background-color: transparent;
+  border: none;
+  color: #333;
+}
+
+.add-btn:focus {
+  color: #333;
+}
+
+
+.add-icon {
+  font-size: 2em;
 }
 
 .title {
@@ -111,7 +136,7 @@ input[type='number'] {
 
 .list {
   list-style-type: none;
-  padding: 0;
+  padding: 0 0 20px 0;
   margin-bottom: 40px;
 }
 

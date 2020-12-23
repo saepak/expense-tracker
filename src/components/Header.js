@@ -6,7 +6,7 @@ const Header = () => {
     const { Title } = Typography;
 
     return (
-        <Title style={{textAlign:'center', paddingTop: 25}}>Expense Tracker</Title>
+        <Title level={2} style={{textAlign:'center', paddingTop: 25}}>Expense Tracker</Title>
     )
 }
 

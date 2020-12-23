@@ -7,8 +7,6 @@ const TransactionList = () => {
 
     const { Title } = Typography
     const {transactions} = useContext(GlobalContext)
-    console.log(transactions)
-
 
     return (
         <div>

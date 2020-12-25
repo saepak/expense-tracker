@@ -15,7 +15,10 @@ const TransactionList = () => {
             </Title>
             <ul className="list">
                 {transactions.map(transaction => (
-                        <Transaction key={transaction.id} transaction={transaction}/>
+                        <Transaction 
+                            key={transaction.id} 
+                            transaction={transaction}
+                        />
                     )
                 )}
 

@@ -144,14 +144,13 @@ input[type='number'] {
   background-color: #fff;
   box-shadow: 1px 1px 1px 1px rgba(0,0,0,.05);
   color: #333;
-  display: flex;
-  justify-content: space-between;
   position: relative;
   padding: 15px;
   margin: 10px 0;
 }
 
 .list .number {
+  float: right;
   padding-right: 35px;
 }
 
@@ -175,3 +174,11 @@ input[type='number'] {
   right: 10px;
   background-color: white;
 }
+
+.alert {
+  width: 300px!important;
+  display: fixed!important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 

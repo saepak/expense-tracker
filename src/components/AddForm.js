@@ -1,5 +1,6 @@
-import React,{useState, useContext} from 'react'
+import React,{ useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
+import { Button } from 'antd'
 
 
 const AddForm = () => {
@@ -39,7 +40,11 @@ const AddForm = () => {
                 placeholder='Amount ( -expense, +income)'
                 onChange={(e)=> setAmount(e.target.value)} />
             </div>
-            <button className="btn">Add transaction</button>
+            <Button 
+                type="text" 
+                className="btn">
+                    Add transaction
+            </Button>
         </form>
     )
 }

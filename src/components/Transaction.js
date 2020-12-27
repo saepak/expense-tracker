@@ -39,7 +39,6 @@ const Transaction = ({transaction}) => {
             <Modal title='Delete' visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
                 <p>Are you sure you want to delete this transaction?</p>
             </Modal>
-
         </li>
     )
 }

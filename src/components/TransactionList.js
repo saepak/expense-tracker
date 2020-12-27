@@ -21,7 +21,6 @@ const TransactionList = () => {
                         />
                     )
                 )}
-
             </ul>
         </div>
     )

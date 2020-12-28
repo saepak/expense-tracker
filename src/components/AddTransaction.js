@@ -9,7 +9,6 @@ const AddTransaction = () => {
     const { Title } = Typography
     const [add, setAdd] = useState(false)
 
-
     const addBtn = () => {
         if(add === false) {
             setAdd(true)

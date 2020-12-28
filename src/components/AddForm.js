@@ -1,6 +1,15 @@
-import React,{ useState, useContext } from 'react'
+import React,{ useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
-import { Button } from 'antd'
+import { Button, Form, Input } from 'antd'
+
+const layout = {
+    labelCol: { span: 8 },
+    wrapperCol: { span: 16 },
+}
+
+const tailLayout = {
+    wrapperCol: { offset: 8, span: 16 },
+}
 
 
 const AddForm = () => {
@@ -8,6 +17,7 @@ const AddForm = () => {
     const [text, setText] = useState('')
     const [amount, setAmount] = useState(0)
     const { addTransaction } = useContext(GlobalContext)
+    const [form] = Form.useForm();
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -19,33 +29,51 @@ const AddForm = () => {
         }
 
         addTransaction(newTransaction)
-        setText('')
-        setAmount(0)
+        form.resetFields()
     }
 
+
     return (
-        <form onSubmit={onSubmit}>
-            <div className="form-control">
-            <input 
-                type="text" 
-                value={text} 
-                placeholder='Enter new transaction'
-                style={{marginBottom: 10}}
-                onChange={(e)=> setText(e.target.value)} />
-            </div>
-            <div className="form-control">
-            <input 
-                type="number" 
-                value={amount}
-                placeholder='Amount ( -expense, +income)'
-                onChange={(e)=> setAmount(e.target.value)} />
-            </div>
+        <Form
+            {...layout}
+            name="basic"
+            form={form}
+            initialValues={{ remember: true }}
+        >
+            <Form.Item
+                name="transaction"
+                rules={[{ required: true, message: 'Please input your transaction' }]}
+            >
+                <Input 
+                    type="text" 
+                    value={text} 
+                    placeholder='Enter new transaction'
+                    className='add-input'
+                    onChange={(e)=> setText(e.target.value)} 
+                />
+            </Form.Item>
+            <Form.Item
+                name="amount"
+                rules={[{ required: true, message: 'Please input your amount' }]}
+            >
+                <Input 
+                    type="number" 
+                    value={amount}
+                    className='add-input'
+                    placeholder='Amount ( -expense, +income)'
+                    onChange={(e)=> setAmount(e.target.value)} 
+                />
+            </Form.Item>
+
             <Button 
-                type="text" 
+                type="primary"
+                htmlType="submit"
+                onClick={onSubmit}
                 className="btn">
                     Add transaction
             </Button>
-        </form>
+
+        </Form>
     )
 }
 

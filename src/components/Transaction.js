@@ -22,13 +22,16 @@ const Transaction = ({transaction}) => {
       setIsModalVisible(false);
     };
 
-
     const sign = transaction.amount < 0 ? '-' : '+'
+    
 
     return (
         <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
             {transaction.text}
-            <span className='number'>{sign}${Math.abs(transaction.amount)}</span>
+            <span className='number'>
+              {sign}
+              ${Math.abs(transaction.amount)}
+            </span>
 
             <Button 
                 type='text'

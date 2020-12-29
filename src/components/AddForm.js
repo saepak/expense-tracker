@@ -28,7 +28,12 @@ const AddForm = () => {
             amount: +amount
         }
 
-        addTransaction(newTransaction)
+        if (text.length > 0) {
+            return addTransaction(newTransaction)
+        } else {
+            return ''
+        }
+        
         form.resetFields()
     }
 
@@ -72,7 +77,6 @@ const AddForm = () => {
                 className="btn">
                     Add transaction
             </Button>
-
         </Form>
     )
 }

@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
 import Transaction from './Transaction'
-import { Typography } from 'antd'
+import { Typography} from 'antd'
 
 const TransactionList = () => {
 

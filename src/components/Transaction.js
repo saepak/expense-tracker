@@ -23,14 +23,14 @@ const Transaction = ({transaction}) => {
     };
 
     const sign = transaction.amount < 0 ? '-' : '+'
+    const amountNum = Math.abs(transaction.amount).toLocaleString()
     
 
     return (
         <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
             {transaction.text}
             <span className='number'>
-              {sign}
-              ${Math.abs(transaction.amount)}
+              {sign}${amountNum}
             </span>
 
             <Button 

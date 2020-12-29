@@ -28,7 +28,6 @@ const AddTransaction = () => {
                 </Button>
             </div>
             { add ? <AddForm /> : '' }
-
         </div>
     )
 }

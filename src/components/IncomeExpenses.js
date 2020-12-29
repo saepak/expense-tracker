@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
-import { Typography } from 'antd'
+import { Typography, Statistic } from 'antd'
 
 const IncomeExpenses = () => {
 
@@ -13,23 +13,30 @@ const IncomeExpenses = () => {
       .filter(item => item > 0)
       .reduce((acc, item) => (acc += item), 0)
       .toFixed(2)
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   
     const expense = (
       amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
       -1
     ).toFixed(2)
-    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
 
     return (
         <div className="inc-exp-container">
             <div>
-                <Title level={5}>Income</Title>
-                <p className="money plus">${income}</p>
+                <Statistic 
+                  title="Income" 
+                  value={income} 
+                  prefix="$"
+                  valueStyle={{ color: '#2ecc71' }}
+                />
             </div>
             <div>
-                <Title level={5}>Expense</Title>
-                <p className="money minus">${expense}</p>
+                <Statistic 
+                  title="Expense" 
+                  value={expense} 
+                  prefix="$"
+                  valueStyle={{ color: '#c0392b' }}
+                />
             </div>
       </div>
     )

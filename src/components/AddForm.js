@@ -28,13 +28,14 @@ const AddForm = () => {
             amount: +amount
         }
 
+        form.resetFields()
+
         if (text.length > 0) {
             return addTransaction(newTransaction)
         } else {
             return ''
         }
         
-        form.resetFields()
     }
 
 

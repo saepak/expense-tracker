@@ -4,24 +4,25 @@ import Balance from './components/Balance'
 import IncomeExpenses from './components/IncomeExpenses'
 import TransactionList from './components/TransactionList'
 import AddTransaction from './components/AddTransaction'
-import Login from './components/oauth/Login'
 import Logout from './components/oauth/Logout'
-
+import Login from './components/oauth/Login'
 import { GlobalProvider } from './context/GlobalState'
 
 function App() {
   return (
-    <GlobalProvider>
-        <Login />
+    <>
+    <Login />
+      <GlobalProvider>
+      <div className='container'> 
+        <Header />
         <Logout />
-      <div className='container'>
-        {/* <Header />
         <Balance />
         <IncomeExpenses />
         <AddTransaction />
-        <TransactionList /> */}
+        <TransactionList />
       </div>
     </GlobalProvider>
+      </>
   );
 }
 

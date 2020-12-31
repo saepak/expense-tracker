@@ -1,7 +1,8 @@
 import React from 'react'
 import { useGoogleLogin } from 'react-google-login'
 import { Button, Typography } from 'antd'
-import { refreshTokenSetup } from '../utils/refreshToken';
+import { refreshTokenSetup } from '../utils/refreshToken'
+import {GoogleCircleFilled} from '@ant-design/icons'
 
 const clientId =
   '801993652344-tlkqg3r43lv3b3bk45msa9qf2j5r2v14.apps.googleusercontent.com'
@@ -9,18 +10,20 @@ const clientId =
 
 const Login = () => {
 
+    const { Title } = Typography
+
     const onSuccess = (res) => {
         console.log('Login Success: currentUser:', res.profileObj);
-        alert(
-          `Logged in successfully welcome ${res.profileObj.name} 😍`
-        );
+        // alert(
+        //   `Logged in successfully welcome ${res.profileObj.name} 😍`
+        // );
         refreshTokenSetup(res);
       };
     
       const onFailure = (res) => {
         console.log('Login failed: res:', res);
         alert(
-          `Failed to login. 😢 Please ping this to repo owner twitter.com/sivanesh_fiz`
+          `Failed to login. 😢 `
         );
       };
     
@@ -33,14 +36,19 @@ const Login = () => {
       });
 
     return (
-        <div>
-            <Button onClick={signIn} >
-                <Typography>Sign in with Google</Typography>
+        <div className='login-screen'>
+            <Button 
+                onClick={signIn} 
+                className='loginBtn'
+            >
+                <Title level={2}>
+                     <GoogleCircleFilled style={{paddingRight: 10, color:'#333'}}/>
+                    Sign in with Google
+                </Title>
             </Button>
         </div>
     )
 }
-
 
 export default Login
 

@@ -190,6 +190,42 @@ input[type='number'] {
 } 
 
 
+
+.login-screen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #eee;
+}
+
+.loginBtn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+  z-index: 999;
+}
+.loginBtn h2 {
+  display: inline;
+}
+
+.logoutBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.logoutBtn h5 {
+  display: inline;
+}
+
+
 @media screen and (max-width: 360px) {
   .container {
     width: 100%;

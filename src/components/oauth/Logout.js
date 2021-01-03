@@ -26,14 +26,16 @@ function Logout() {
   })
 
   return (
-    <Button 
-      onClick={signOut}
-      className='logoutBtn'
-    >
-      <Title level={5}>
-        <LogoutOutlined style={{paddingRight: 10}}/>Sign out
-      </Title>
-    </Button>
+    <div>
+      <Button 
+        onClick={signOut}
+        className='logoutBtn'
+      >
+        <Title level={5}>
+          <LogoutOutlined style={{paddingRight: 10}}/>Sign out
+        </Title>
+      </Button>
+    </div>
   );
 }
 

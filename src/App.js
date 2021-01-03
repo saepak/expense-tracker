@@ -1,4 +1,5 @@
-import './App.css';
+import './App.css'
+import React, { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Balance from './components/Balance'
 import IncomeExpenses from './components/IncomeExpenses'
@@ -8,21 +9,22 @@ import Logout from './components/oauth/Logout'
 import Login from './components/oauth/Login'
 import { GlobalProvider } from './context/GlobalState'
 
+
 function App() {
   return (
     <>
     <Login />
-      <GlobalProvider>
-      <div className='container'> 
-        <Header />
-        <Logout />
-        <Balance />
-        <IncomeExpenses />
-        <AddTransaction />
-        <TransactionList />
-      </div>
+    <GlobalProvider>
+    <div className='container'> 
+      <Header />
+      <Logout />
+      <Balance />
+      <IncomeExpenses />
+      <AddTransaction />
+      <TransactionList />
+    </div>
     </GlobalProvider>
-      </>
+    </>
   );
 }
 

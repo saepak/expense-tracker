@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useGoogleLogin } from 'react-google-login'
 import { refreshTokenSetup } from '../utils/refreshToken'
 import LoginButton from './LoginButton'
+import Container from './../Container'
 
 const clientId =
   '801993652344-tlkqg3r43lv3b3bk45msa9qf2j5r2v14.apps.googleusercontent.com'
@@ -10,7 +11,6 @@ const clientId =
 const Login = () => {
 
     const [visible, setVisible] = useState(true)
-
 
     const onSuccess = (res) => {
         console.log('Login Success: currentUser:', res.profileObj)
@@ -27,7 +27,7 @@ const Login = () => {
         `Failed to login. 😢 `
       )
     }
-  
+
     const { signIn } = useGoogleLogin({
       onSuccess,
       onFailure,
@@ -37,7 +37,9 @@ const Login = () => {
     })
 
     return (
-      visible ? <LoginButton signIn={signIn}/> : ""
+      <>
+       {visible ? <LoginButton signIn={signIn}/> : ''}
+      </>
     )
 }
 

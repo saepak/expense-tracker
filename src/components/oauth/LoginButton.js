@@ -3,6 +3,7 @@ import { Button, Typography } from 'antd'
 import {GoogleCircleFilled} from '@ant-design/icons'
 
 const LoginButton = (props) => {
+    
     const { Title } = Typography
 
     return (
@@ -12,7 +13,7 @@ const LoginButton = (props) => {
             className='loginBtn'
         >
             <Title level={2}>
-                 <GoogleCircleFilled style={{paddingRight: 10, color:'#333'}}/>
+                <GoogleCircleFilled style={{paddingRight: 10, color:'#333'}}/>
                 Sign in with Google
             </Title>
         </Button>

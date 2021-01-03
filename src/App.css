@@ -211,8 +211,15 @@ input[type='number'] {
   padding: 10px 20px;
   z-index: 999;
 }
+
 .loginBtn h2 {
   display: inline;
+}
+
+.user-info {
+  position: fixed;
+  top: 20px; 
+  left: 20px;
 }
 
 .logoutBtn {

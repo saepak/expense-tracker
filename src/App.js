@@ -14,14 +14,18 @@ function App() {
   return (
     <>
     <Login />
+    <Header />
+    <Logout />
     <GlobalProvider>
     <div className='container'> 
-      <Header />
-      <Logout />
-      <Balance />
-      <IncomeExpenses />
-      <AddTransaction />
-      <TransactionList />
+      <div>
+        <Balance />
+        <IncomeExpenses />
+        <AddTransaction />
+      </div>
+      <div>
+        <TransactionList />
+      </div>
     </div>
     </GlobalProvider>
     </>

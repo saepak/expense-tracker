@@ -9,7 +9,7 @@ const TransactionList = () => {
     const {transactions} = useContext(GlobalContext)
 
     return (
-        <div>
+        <div className='history'>
             <Title level={5} className='title'>
                 History
             </Title>

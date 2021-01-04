@@ -37,9 +37,7 @@ const Login = () => {
     })
 
     return (
-      <>
-       {visible ? <LoginButton signIn={signIn}/> : ''}
-      </>
+      visible ? <LoginButton signIn={signIn}/> : ''
     )
 }
 

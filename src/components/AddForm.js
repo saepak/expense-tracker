@@ -11,7 +11,6 @@ const tailLayout = {
     wrapperCol: { offset: 8, span: 16 },
 }
 
-
 const AddForm = () => {
 
     const [text, setText] = useState('')
@@ -37,7 +36,6 @@ const AddForm = () => {
         }
         
     }
-
 
     return (
         <Form

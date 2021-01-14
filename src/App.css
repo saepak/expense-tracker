@@ -31,6 +31,10 @@ h1 {
   margin: 0;
 }
 
+button:focus, button:active, button:checked {
+  background-color: none;
+}
+
 
 .balance {
   background-color: white;
@@ -77,8 +81,27 @@ h1 {
   position: relative;
 }
 
+.graph-btn {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+}
+
+.graphBox {
+  display: block;
+}
+
+.noGraphBox {
+  display: none;
+}
+
+.ant-form-item {
+  margin-bottom: 10px!important;
+}
+
 .add-input {
   width: 320px!important;
+  
 }
 
 .add-btn {
@@ -145,6 +168,10 @@ input[type='number'] {
 
 .history {
   width: 320px;
+  margin-left: 30px;
+}
+
+.add-list {
   margin-left: 30px;
 }
 
@@ -267,6 +294,10 @@ input[type='number'] {
 
   .history {
     width: 100%;
+    margin-left: 0;
+  }
+
+  .add-list {
     margin-left: 0;
   }
 

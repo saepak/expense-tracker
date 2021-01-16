@@ -1,8 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { useGoogleLogout } from 'react-google-login'
 import { Button, Typography } from 'antd'
 import { LogoutOutlined } from '@ant-design/icons' 
-import LoginButton from './LoginButton'
 
 const clientId =
   '801993652344-tlkqg3r43lv3b3bk45msa9qf2j5r2v14.apps.googleusercontent.com'

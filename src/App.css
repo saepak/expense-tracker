@@ -101,7 +101,10 @@ button:focus, button:active, button:checked {
 
 .add-input {
   width: 320px!important;
-  
+}
+
+.select-box {
+  width: 320px!important;
 }
 
 .add-btn {
@@ -289,6 +292,10 @@ input[type='number'] {
   }
 
   .add-input {
+    width: 100%!important;
+  }
+
+  .select-box {
     width: 100%!important;
   }
 

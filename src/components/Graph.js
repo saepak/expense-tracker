@@ -1,9 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState, useContext} from 'react'
 import { Button } from 'antd'
+import { GlobalContext } from '../context/GlobalState'
 
 
 const Graph = () => {
 
+    const { transactions } = useContext(GlobalContext)
     const [graph, setGraph] = useState(false)
 
     const showGraph = () => {
@@ -21,7 +23,7 @@ const Graph = () => {
                 onClick={showGraph} 
                 className='graph-btn'
             >
-                Graph View
+                View Graph
             </Button>
             <div className={ graph ? 'graphBox' : 'noGraphBox'}>
                 Graph will be here

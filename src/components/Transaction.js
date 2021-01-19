@@ -1,26 +1,26 @@
 import React,{useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
 import { DeleteOutlined } from '@ant-design/icons'
-import { Modal, Button } from 'antd';
+import { Modal, Button } from 'antd'
 
 
 const Transaction = ({transaction}) => {
 
     const { deleteTransaction } = useContext(GlobalContext)
-    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [isModalVisible, setIsModalVisible] = useState(false)
 
     const showModal = () => {
-      setIsModalVisible(true);
-    };
+      setIsModalVisible(true)
+    }
   
     const handleOk = () => {
       deleteTransaction(transaction.id)
-      setIsModalVisible(false);
-    };
+      setIsModalVisible(false)
+    }
   
     const handleCancel = () => {
-      setIsModalVisible(false);
-    };
+      setIsModalVisible(false)
+    }
 
     const sign = transaction.amount < 0 ? '-' : '+'
     const amountNum = Math.abs(transaction.amount).toLocaleString()

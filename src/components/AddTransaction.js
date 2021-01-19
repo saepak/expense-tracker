@@ -8,6 +8,7 @@ const layout = {
     wrapperCol: { span: 16 },
 }
 
+
 const AddTransaction = () => {
 
     const { Title } = Typography
@@ -15,8 +16,9 @@ const AddTransaction = () => {
 
     const [text, setText] = useState('')
     const [amount, setAmount] = useState(0)
-    const [group, setGroup] = useState('')
+    const [group, setGroup] = useState('Food')
     const {addTransaction} = useContext(GlobalContext)
+
 
     const options =  [
         {label: 'Food', value: 'food'},
@@ -41,9 +43,10 @@ const AddTransaction = () => {
         }
 
         form.resetFields()
-        setGroup('')
+        setGroup(null)
 
-        if (text.length > 0 && group.length > 0) {
+
+        if (text.length > 0) {
             return addTransaction(newTransaction)
         } else {
             return ''
@@ -91,7 +94,6 @@ const AddTransaction = () => {
                 </Form.Item>
 
                 <Select 
-                    placeholder={'Group'}
                     onChange={handleChange}
                     options={options}
                     className='select-box'

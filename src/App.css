@@ -17,7 +17,7 @@ body {
 .header {
   text-align: center; 
   padding-top: 60px; 
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .container {
@@ -182,9 +182,6 @@ input[type='number'] {
   margin-left: 30px;
 }
 
-.add-list {
-  margin-left: 30px;
-}
 
 .list {
   list-style-type: none;
@@ -282,6 +279,7 @@ input[type='number'] {
 @media screen and (max-width: 680px) {
 
   .header {
+    padding-top: 80px;
     padding-bottom: 10px;
   }
 
@@ -312,10 +310,6 @@ input[type='number'] {
     margin-left: 0;
   }
 
-  .add-list {
-    margin-left: 0;
-  }
-
   .logoutBtn {
     top: 5px;
     right: 5px;
@@ -323,11 +317,18 @@ input[type='number'] {
 }
 
 @media screen and (max-width: 360px) {
+  .header {
+    font-size: 26px!important;
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+
   .container {
     width: 100%;
     margin: 20px 0;
     padding: 0 10px;
   }
+
   .add-input {
     width: 100%!important;
   }

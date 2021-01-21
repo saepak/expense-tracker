@@ -23,9 +23,9 @@ function App() {
         <Balance />
         <IncomeExpenses />
         <Graph />
+        <AddTransaction />
       </div>
       <div>
-        <AddTransaction />
         <TransactionList />
       </div>
     </div>

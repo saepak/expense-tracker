@@ -8,12 +8,43 @@ const Graph = () => {
 
     const { transactions } = useContext(GlobalContext)
 
+    let hobbyTotal = 0
+    let foodTotal = 0
+    let giftTotal = 0
+    let utilTotal = 0
+    let otherTotal = 0
+
+    const hobbyNum =  transactions.filter(item => item.group === 'hobby').map((num) => num.amount)
+    for (const hobbyVal of hobbyNum) {
+        hobbyTotal += hobbyVal
+    }
+
+    const foodNum =  transactions.filter(item => item.group === 'food').map((num) => num.amount)
+    for (const foodVal of foodNum) {
+        foodTotal += foodVal
+    }
+
+    const giftNum =  transactions.filter(item => item.group === 'gift').map((num) => num.amount)
+    for (const giftVal of giftNum) {
+        giftTotal += giftVal
+    }
+
+    const utilNum =  transactions.filter(item => item.group === 'util').map((num) => num.amount)
+    for (const utilVal of utilNum) {
+        utilTotal += utilVal
+    }
+
+    const otherNum =  transactions.filter(item => item.group === 'other').map((num) => num.amount)
+    for (const otherVal of otherNum) {
+        otherTotal += otherVal
+    }
+
     const data = {
         labels: ['hobby','food','gift','util', 'other'],
         datasets: [
             {
                 label : 'Sales for 2020(M)',
-                data: [ -200, -100, -12, 0, 0],
+                data: [ hobbyTotal, foodTotal, giftTotal, utilTotal, otherTotal],
                 backgroundColor: [
                     'rgba(255, 99, 132, 1)', 
                     'rgba(255, 205, 86, 1)',
@@ -49,7 +80,7 @@ const Graph = () => {
                 View Chart
             </Button>
             <Modal title='Expense Chart' visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                <Doughnut data={data} options={{maintainAspectRatio : false}}/>
+                <Doughnut data={data} options={{height: 350, maintainAspectRatio : false}}/>
             </Modal>
         </div>
     )

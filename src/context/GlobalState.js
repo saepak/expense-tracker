@@ -10,7 +10,7 @@ const initialState = {
         { id: 5, text: 'Flower', amount: -20, group: 'gift' },
         { id: 6, text: 'Lunch', amount: -18, group: 'food' },
         { id: 7, text: 'Gas', amount: -42, group: 'util' },
-        { id: 8, text: 'Card', amount: -3, group: 'other' },
+        { id: 8, text: 'Card', amount: -12, group: 'other' },
     ]
 }
 

@@ -28,8 +28,7 @@ const Transaction = ({transaction}) => {
 
     return (
         <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
-            {transaction.text} / 
-            {transaction.group}
+            {transaction.text} 
             <span className='number'>
               {sign}${amountNum}
             </span>

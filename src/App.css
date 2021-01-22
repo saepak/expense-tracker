@@ -1,9 +1,5 @@
 @import '~antd/dist/antd.css';
 
-.App {
-  text-align: center;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -12,6 +8,10 @@ body {
   background-color: #f1f1f1;
   min-height: 100vh;
   margin: 0;
+}
+
+.App {
+  text-align: center;
 }
 
 .header {
@@ -35,6 +35,7 @@ button:focus, button:active, button:checked {
   background-color: none;
 }
 
+/*  Balance  */
 
 .balance {
   background-color: white;
@@ -43,6 +44,9 @@ button:focus, button:active, button:checked {
   text-align: center;
   width: 320px;
 }
+
+
+/*  Income Expenses  */
 
 .inc-exp-container {
   background-color: #fff;
@@ -62,24 +66,13 @@ button:focus, button:active, button:checked {
   border-right: 1px solid #dedede;
 }
 
-.money {
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin: 5px 0;
-}
-
-.money.plus {
-  color: #2ecc71;
-}
-
-.money.minus {
-  color: #c0392b;
-}
 
 .title-container {
   width: 100%;
   position: relative;
 }
+
+/* chart */
 
 .graph-btn {
   width: 100%;
@@ -87,21 +80,12 @@ button:focus, button:active, button:checked {
   font-size: 16px;
 }
 
-.graphBox {
-  display: block;
-  box-sizing: border-box;
-  padding: 20px 0 0;
+canvas {
+  height: 300px!important;
 }
 
-.chart {
-  position: relative;
-  height: 100%;
-  width:100%;
-}
 
-.noGraphBox {
-  display: none;
-}
+/* AddTrnsaction */
 
 .ant-form-item {
   margin-bottom: 10px!important;
@@ -177,6 +161,9 @@ input[type='number'] {
   outline: 0;
 }
 
+
+/*TransactionList*/
+
 .history {
   width: 320px;
   margin-left: 30px;
@@ -233,6 +220,7 @@ input[type='number'] {
 } 
 
 
+/* Login & Logput */
 
 .login-screen {
   position: fixed;
@@ -265,16 +253,27 @@ input[type='number'] {
   left: 20px;
 }
 
-.logoutBtn {
+.logout-box {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
   z-index: 999;
+  text-align: right;
+}
+
+.logoutBtn {
+  margin: 3px 3px 0 0;
 }
 
 .logoutBtn h5 {
   display: inline;
 }
+
+
+/* responsive */
 
 @media screen and (max-width: 680px) {
 
@@ -310,10 +309,16 @@ input[type='number'] {
     margin-left: 0;
   }
 
-  .logoutBtn {
-    top: 5px;
-    right: 5px;
+  .logout-box {
+    box-shadow: 1px 5px 10px rgba(0,0,0,.08);
+    border-bottom: 1px solid #dedede;
+    background-color: #f1f1f1;
   }
+
+  .logoutBtn {
+    margin: 8px 7px 0 0;
+  }
+  
 }
 
 @media screen and (max-width: 360px) {

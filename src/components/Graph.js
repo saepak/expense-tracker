@@ -69,7 +69,6 @@ const Graph = () => {
       setIsModalVisible(false)
     }
 
-
     return (
         <div style={{marginBottom: 20}}>
             <Button 

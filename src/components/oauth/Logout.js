@@ -31,7 +31,7 @@ const Logout = () => {
   }
 
   return (
-    <>
+    <div className='logout-box'>
       <Button 
         onClick={signOut}
         className='logoutBtn'
@@ -40,7 +40,7 @@ const Logout = () => {
           <LogoutOutlined style={{paddingRight: 10}}/>Sign out
         </Title>
       </Button>
-    </>
+    </div>
   )
 }
 

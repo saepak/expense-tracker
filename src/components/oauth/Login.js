@@ -3,7 +3,6 @@ import { useGoogleLogin } from 'react-google-login'
 import { refreshTokenSetup } from '../utils/refreshToken'
 import LoginButton from './LoginButton'
 
-
 const clientId =
   '801993652344-tlkqg3r43lv3b3bk45msa9qf2j5r2v14.apps.googleusercontent.com'
 

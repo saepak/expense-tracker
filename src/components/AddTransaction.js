@@ -8,7 +8,6 @@ const layout = {
     wrapperCol: { span: 16 }
 }
 
-
 const AddTransaction = () => {
 
     const { Title } = Typography

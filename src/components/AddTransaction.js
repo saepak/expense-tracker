@@ -15,7 +15,8 @@ const AddTransaction = () => {
 
     const [text, setText] = useState('')
     const [amount, setAmount] = useState(0)
-    const [group, setGroup] = useState('Food')
+    const [group, setGroup] = useState('food')
+    const [value, setValue] = useState({label:'Food', value:'food'})
     const {addTransaction} = useContext(GlobalContext)
 
 
@@ -42,15 +43,14 @@ const AddTransaction = () => {
         }
 
         form.resetFields()
-        setGroup(null)
-
+        setValue({label:'Food', value:'food'})
 
         if (text.length > 0) {
             return addTransaction(newTransaction)
         } else {
             return ''
         }
-        
+
     }
 
     return (
@@ -95,6 +95,7 @@ const AddTransaction = () => {
                 <Select 
                     onChange={handleChange}
                     options={options}
+                    defaultValue={value}
                     className='select-box'
                 />
 

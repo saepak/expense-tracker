@@ -16,10 +16,10 @@ function App() {
     <>
     <Login />
     <Header />
-    <Logout />
     <GlobalProvider>
     <div className='container'> 
       <div>
+        {/* <Logout /> */}
         <Balance />
         <IncomeExpenses />
         <Graph />

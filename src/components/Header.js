@@ -1,17 +1,18 @@
 import React from 'react'
-import { Typography } from 'antd';
+import { Typography } from 'antd'
+import { HiCurrencyDollar } from 'react-icons/hi';
 
 
 const Header = () => {
     
-    const { Title } = Typography;
+    const { Title } = Typography
 
     return (
         <Title 
             level={2} 
             className='header'
         >
-            My Expense Manager
+           <HiCurrencyDollar style={{marginBottom: -5}} /> My Expense Manager 
         </Title>
     )
 }

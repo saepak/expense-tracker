@@ -8,12 +8,14 @@ const Header = () => {
     const { Title } = Typography
 
     return (
-        <Title 
-            level={2} 
-            className='header'
-        >
-           <HiCurrencyDollar style={{marginBottom: -5}} /> My Expense Manager 
-        </Title>
+        <div className='headerBG'> 
+            <Title 
+                level={2} 
+                className='header'
+            >
+            <HiCurrencyDollar style={{marginBottom: -5}} /> My Expense Manager 
+            </Title>
+        </div>
     )
 }
 

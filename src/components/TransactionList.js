@@ -10,7 +10,7 @@ const TransactionList = () => {
 
     return (
         <div className='history'>
-            <Title level={5} className='title'>
+            <Title level={4} className='title'>
                 History
             </Title>
             <ul className="list">

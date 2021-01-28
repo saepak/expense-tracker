@@ -18,14 +18,14 @@ function App() {
     <Header />
     <GlobalProvider>
     <div className='container'> 
-      <div>
+      <div className='content-box'>
         {/* <Logout /> */}
         <Balance />
         <IncomeExpenses />
         <Graph />
         <AddTransaction />
       </div>
-      <div>
+      <div className='content-box right-box'>
         <TransactionList />
       </div>
     </div>

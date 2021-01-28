@@ -40,7 +40,7 @@ const Graph = () => {
     }
 
     const data = {
-        labels: ['hobby','food','gift','util', 'other'],
+        labels: ['Hobby','Food','Gift','Util', 'Other'],
         datasets: [
             {
                 label : 'Sales for 2020(M)',
@@ -72,13 +72,18 @@ const Graph = () => {
     return (
         <div style={{marginBottom: 20}}>
             <Button 
-                type="primary" 
+                type='primary'
                 onClick={showModal} 
                 className='graph-btn'
             >
                 View Chart
             </Button>
-            <Modal title='Expense Chart' visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+            <Modal 
+                title='Expense Chart' 
+                visible={isModalVisible} 
+                onOk={handleOk} 
+                onCancel={handleCancel}
+            >
                 <Doughnut data={data} options={{height: 350, maintainAspectRatio : false}}/>
             </Modal>
         </div>

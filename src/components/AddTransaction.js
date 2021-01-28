@@ -56,7 +56,7 @@ const AddTransaction = () => {
     return (
         <div className='add-list'>
             <div className='title-container'>
-                <Title level={5} className='title'>
+                <Title level={4} className='title' style={{marginBottom: 12}}>
                     Add new transaction
                 </Title>
             </div>
@@ -104,7 +104,7 @@ const AddTransaction = () => {
                     htmlType="submit"
                     onClick={onSubmit}
                     className="btn">
-                        Add transaction
+                        Add Transaction
                 </Button>
             </Form>
         </div>

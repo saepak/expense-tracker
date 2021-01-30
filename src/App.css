@@ -199,20 +199,26 @@ input[type='number'] {
   width: 320px;
 }
 
-
 .list {
   list-style-type: none;
-  padding: 0 0 20px 0;
-  margin-bottom: 40px;
+  padding: 0 0 0px 0;
 }
 
 .list li {
   background-color: #fff;
-  box-shadow: 1px 1px 1px 1px rgba(0,0,0,.05);
   color: #333;
   position: relative;
-  padding: 15px;
-  margin: 10px 0;
+  padding: 20px 15px;
+  border-bottom: 1px solid #ececec;
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+.list .text {
+  font-size: 16px!important;
+  text-transform: capitalize;
 }
 
 .list .number {
@@ -220,12 +226,22 @@ input[type='number'] {
   padding-right: 35px;
 }
 
-.list li.plus {
-  border-left: 5px solid #2ecc71;
+.list li em {
+  width: 8px;
+  height: 8px;
+  border-radius: 25px;
+  position: absolute;
+  top: 28px;
+  left: 0px;
+  z-index: 9;
 }
 
-.list li.minus {
-  border-left: 5px solid #c0392b;
+.list li .plus {
+  background-color:  #2ecc71;
+}
+
+.list li .minus {
+  background-color:  #c0392b;
 }
 
 .delete-btn {
@@ -236,7 +252,7 @@ input[type='number'] {
   line-height: 20px;
   padding: 2px 5px;
   position: absolute;
-  top: 23%;
+  top: 27%;
   right: 10px;
   background-color: white;
 }
@@ -269,8 +285,10 @@ input[type='number'] {
   transform: translate(-50%, -50%);
   width: auto;
   height: auto;
-  padding: 10px 20px;
+  padding: 15px 25px;
   z-index: 999;
+  border-radius: 50px;
+  box-shadow: rgba(0,0,0,.05);
 }
 
 .loginBtn h2 {
@@ -296,6 +314,7 @@ input[type='number'] {
 
 .logoutBtn {
   margin: 3px 3px 0 0;
+  border-radius: 20px!important;
 }
 
 .logoutBtn h5 {
@@ -315,7 +334,7 @@ input[type='number'] {
   .container {
     display: block;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 20px 10px;
   }
 
   .balance {
@@ -335,7 +354,7 @@ input[type='number'] {
   }
 
   .right-box {
-    margin-left: 0;
+    margin: 20px 0 20px 0;
   }  
 
   .history {
@@ -371,3 +390,5 @@ input[type='number'] {
     width: 100%!important;
   }
 }
+
+

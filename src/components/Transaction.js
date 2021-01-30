@@ -27,8 +27,9 @@ const Transaction = ({transaction}) => {
     
 
     return (
-        <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
-            {transaction.text} / {transaction.group}
+        <li>
+            <em className={transaction.amount < 0 ? 'minus' : 'plus'}></em>
+            <span className='text'>{transaction.text} </span>
             <span className='number'>
               {sign}${amountNum} 
             </span>
@@ -39,7 +40,12 @@ const Transaction = ({transaction}) => {
                 className='delete-btn'>
                     <DeleteOutlined style={{color: '#999'}} />
             </Button>
-            <Modal title='Delete' visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+            <Modal 
+              title='Delete' 
+              visible={isModalVisible} 
+              onOk={handleOk} 
+              onCancel={handleCancel}
+            >
                 <p>Are you sure you want to delete this transaction?</p>
             </Modal>
         </li>

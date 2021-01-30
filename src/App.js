@@ -19,7 +19,6 @@ function App() {
     <GlobalProvider>
     <div className='container'> 
       <div className='content-box'>
-        {/* <Logout /> */}
         <Balance />
         <IncomeExpenses />
         <Graph />

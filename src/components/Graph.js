@@ -84,7 +84,10 @@ const Graph = () => {
                 onOk={handleOk} 
                 onCancel={handleCancel}
             >
-                <Doughnut data={data} options={{height: 350, maintainAspectRatio : false}}/>
+                <Doughnut 
+                    data={data} 
+                    options={{height: 350, maintainAspectRatio : false}}
+                />
             </Modal>
         </div>
     )

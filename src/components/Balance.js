@@ -16,8 +16,15 @@ const Balance = () => {
     
     return (
         <div className='balance'>
-            <Title level={4} className='title'>Balance</Title>
-            <h1 className='totalBalance'>${total}</h1>
+            <Title 
+                level={4} 
+                className='title'
+            >
+                Balance
+            </Title>
+            <h1 className='totalBalance'>
+                ${total}
+            </h1>
         </div>
     )
 }

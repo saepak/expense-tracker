@@ -100,10 +100,10 @@ const AddTransaction = () => {
                 />
 
                 <Button 
-                    type="primary"
                     htmlType="submit"
                     onClick={onSubmit}
-                    className="btn">
+                    className="btn add_transaction_btn"
+                >
                         Add Transaction
                 </Button>
             </Form>

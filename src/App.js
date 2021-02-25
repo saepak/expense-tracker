@@ -1,12 +1,11 @@
 import './App.css'
 import React from 'react'
 import Header from './components/Header'
-import Balance from './components/Balance'
-import IncomeExpenses from './components/IncomeExpenses'
+import Expenses from './components/Expenses'
+
 import TransactionList from './components/TransactionList'
 import AddTransaction from './components/AddTransaction'
 import Graph from './components/Graph'
-import Logout from './components/oauth/Logout'
 import Login from './components/oauth/Login'
 import { GlobalProvider } from './context/GlobalState'
 
@@ -19,9 +18,7 @@ function App() {
     <GlobalProvider>
     <div className='container'> 
       <div className='content-box'>
-        <Balance />
-        <IncomeExpenses />
-        <Graph />
+        <Expenses />
         <AddTransaction />
       </div>
       <div className='content-box right-box'>

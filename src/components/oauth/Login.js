@@ -5,7 +5,7 @@ import LoginButton from './LoginButton'
 import Logout from './Logout'
 
 const clientId =
-  '801993652344-tlkqg3r43lv3b3bk45msa9qf2j5r2v14.apps.googleusercontent.com'
+  '801993652344-1pa0s8f8ksto4f6ld6sl71t6m5set36v.apps.googleusercontent.com'
 
 
 const Login = () => {

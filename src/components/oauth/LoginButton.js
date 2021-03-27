@@ -12,7 +12,7 @@ const LoginButton = (props) => {
             onClick={props.signIn} 
             className='loginBtn'
         >
-            <Title level={2}>
+            <Title level={2} style={{color:'#333', fontSize: 30}}>
                 <GoogleCircleFilled 
                     style={{paddingRight: 10, color:'#333'}}
                 />
